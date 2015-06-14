@@ -1,0 +1,37 @@
+
+ 
+   
+     <header data-ng-include=" 'angular_modules/header/partials/partial-header.html' "
+                 id="header"
+                 class="header-container "
+                 data-ng-class="{ 'header-fixed': admin.fixedHeader,
+                                  'bg-white': ['11','12','13','14','15','16','21'].indexOf(admin.skin) >= 0,
+                                  'bg-dark': admin.skin === '31',
+                                  'bg-primary': ['22','32'].indexOf(admin.skin) >= 0,
+                                  'bg-success': ['23','33'].indexOf(admin.skin) >= 0,
+                                  'bg-info-alt': ['24','34'].indexOf(admin.skin) >= 0,
+                                  'bg-warning': ['25','35'].indexOf(admin.skin) >= 0,
+                                  'bg-danger': ['26','36'].indexOf(admin.skin) >= 0
+                 }">
+      </header>
+
+        <div class="main-container"
+             data-ng-class="{ 'app-nav-horizontal': admin.menu === 'horizontal' }">
+            <aside data-ng-include=" 'angular_modules/sidebar/partials/partial-sidebar.html' "
+                   id="nav-container"
+                   class="nav-container"  
+                   data-ng-class="{ 'nav-fixed': admin.fixedSidebar,
+                                    'nav-horizontal': admin.menu === 'horizontal',
+                                    'nav-vertical': admin.menu === 'vertical',
+                                    'bg-white': ['31','32','33','34','35','36'].indexOf(admin.skin) >= 0,
+                                    'bg-dark': ['31','32','33','34','35','36'].indexOf(admin.skin) < 0
+                   }">
+            </aside>
+
+            <div id="content" class="content-container">
+                <section data-ui-view
+                         class="view-container {{admin.pageTransition.class}}"></section>
+            </div>
+        </div>
+      
+       

@@ -1,0 +1,25 @@
+{
+  "name": "template",
+  "version": "1.2.1",
+  "description": "main template",
+  "keywords": [
+    "angularjs"
+  ],
+  "main":[
+  "stylesheets/material-design-iconic-font.css",
+  "stylesheets/bootstrap.css",
+  "stylesheets/ui.css",
+  "stylesheets/main.css"
+  ],
+  "authors": [
+    "vineeth c","mail4vineethvijayan@gmail.com"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

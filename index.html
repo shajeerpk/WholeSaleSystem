@@ -1,0 +1,118 @@
+<!doctype html>
+<!--[if lt IE 8]>         <html class="no-js lt-ie8"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" ng-app="dndApp"> <!--<![endif]-->
+<head>
+  <title></title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="utf-8">
+  <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<!-- <link href="app.less" type="text/css" rel="stylesheet/less"> -->
+  <!-- Needs images, font... therefore can not be part of main.css -->
+        <link href='http://fonts.googleapis.com/css?family=Roboto:400,100,500,700,300,300italic,500italic|Roboto+Condensed:400,300' rel='stylesheet' type='text/css'>
+        <!-- end Needs images -->
+  
+  <!-- build:css({.tmp,template}) styles/main.css -->
+  <!-- bower:css -->
+  <link rel='stylesheet' href='bower_components/bootstrap/dist/css/bootstrap.css' />
+  <link rel='stylesheet' href='bower_components/angular-material/angular-material.css' />
+  <link rel='stylesheet' href='bower_components/material-design-iconic-font/css/material-design-iconic-font.css' />
+  <link rel='stylesheet' href='bower_components/font-awesome/css/font-awesome.css' />
+  <link rel='stylesheet' href='bower_components/weather-icons/css/weather-icons.css' />
+  <link rel='stylesheet' href='bower_components/weather-icons/css/weather-icons.min.css' />
+  <link rel='stylesheet' href='bower_components/bootstrap-css-only/css/bootstrap.css' />
+  <link rel='stylesheet' href='bower_components/textAngular/src/textAngular.css' />
+  <link rel='stylesheet' href='bower_components/toastr/toastr.css' />
+  <link rel='stylesheet' href='bower_components/seiyria-bootstrap-slider/dist/css/bootstrap-slider.css' />
+  <link rel='stylesheet' href='bower_components/angular-ui-tree/dist/angular-ui-tree.min.css' />
+  <link rel='stylesheet' href='bower_components/ng-tags-input/ng-tags-input.min.css' />
+  <link rel='stylesheet' href='bower_components/angular-loading-bar/build/loading-bar.css' />
+  <link rel='stylesheet' href='bower_components/template/stylesheets/material-design-iconic-font.css' />
+  <link rel='stylesheet' href='bower_components/template/stylesheets/bootstrap.css' />
+  <link rel='stylesheet' href='bower_components/template/stylesheets/ui.css' />
+  <link rel='stylesheet' href='bower_components/template/stylesheets/main.css' />
+  <!-- endbower -->
+  <!-- endbuild -->
+ 
+</head> 
+   
+  <!-- Livereload script for development only (stripped during dist build) -->
+  <script src="http://localhost:35729/livereload.js" data-concat="false"></script>
+<body ng-controller="AppCtrl" id="app"
+          class="app"
+          data-custom-page 
+          data-off-canvas-nav  
+          data-ng-class=" { 'layout-boxed': admin.layout === 'boxed', 
+          'nav-collapsed-min': admin.menu === 'collapsed'
+          } " ui-view>
+
+
+
+<!-- JS from Bower Components -->
+
+  <!-- build:js(.) js/script.min.js -->
+  <!-- bower:js -->
+  <script src="bower_components/modernizr/modernizr.js"></script>
+  <script src="bower_components/jquery/dist/jquery.js"></script>
+  <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+  <script src="bower_components/angular/angular.js"></script>
+  <script src="bower_components/angular-resource/angular-resource.js"></script>
+  <script src="bower_components/angular-cookies/angular-cookies.js"></script>
+  <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+  <script src="bower_components/angular-route/angular-route.js"></script>
+  <script src="bower_components/angular-animate/angular-animate.js"></script>
+  <script src="bower_components/angular-aria/angular-aria.js"></script>
+  <script src="bower_components/angular-touch/angular-touch.js"></script>
+  <script src="bower_components/angular-material/angular-material.js"></script>
+  <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+  <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+  <script src="bower_components/angular-translate/angular-translate.js"></script>
+  <script src="bower_components/angular-translate-loader-static-files/angular-translate-loader-static-files.js"></script>
+  <script src="bower_components/rangy/rangy-core.js"></script>
+  <script src="bower_components/rangy/rangy-classapplier.js"></script>
+  <script src="bower_components/rangy/rangy-highlighter.js"></script>
+  <script src="bower_components/rangy/rangy-selectionsaverestore.js"></script>
+  <script src="bower_components/rangy/rangy-serializer.js"></script>
+  <script src="bower_components/rangy/rangy-textrange.js"></script>
+  <script src="bower_components/textAngular/src/textAngular.js"></script>
+  <script src="bower_components/textAngular/src/textAngular-sanitize.js"></script>
+  <script src="bower_components/textAngular/src/textAngularSetup.js"></script>
+  <script src="bower_components/toastr/toastr.js"></script>
+  <script src="bower_components/jquery-bridget/jquery.bridget.js"></script>
+  <script src="bower_components/seiyria-bootstrap-slider/js/bootstrap-slider.js"></script>
+  <script src="bower_components/jquery.slimscroll/jquery.slimscroll.min.js"></script>
+  <script src="bower_components/lodash/dist/lodash.compat.js"></script>
+  <script src="bower_components/angular-wizard/dist/angular-wizard.js"></script>
+  <script src="bower_components/angular-ui-tree/dist/angular-ui-tree.js"></script>
+  <script src="bower_components/angular-ui-tree/dist/angular-ui-tree.min.js"></script>
+  <script src="bower_components/ngmap/build/scripts/ng-map.js"></script>
+  <script src="bower_components/ng-tags-input/ng-tags-input.min.js"></script>
+  <script src="bower_components/flot/jquery.flot.js"></script>
+  <script src="bower_components/flot.tooltip/js/jquery.flot.tooltip.js"></script>
+  <script src="bower_components/flot.curvedlines/curvedLines.js"></script>
+  <script src="bower_components/angular-loading-bar/build/loading-bar.js"></script>
+  <script src="bower_components/angular-scroll/angular-scroll.js"></script>
+  <!-- endbower -->
+  
+
+  <!-- Main App JS -->
+  <script src="app.js"></script>
+  <script src="config.router.pages.js"></script>
+  <script src="angular_modules/app.controller.js"></script> 
+  // <!-- <script src="angular_modules/i18n.js"></script> -->
+ 
+  
+  <script src="angular_modules/home/partials/partial-home.js"></script>
+  <script src="angular_modules/login/partials/partial-login.js"></script>
+  <script src="angular_modules/common/directive/uiwave/uiWave.js"></script>
+  <script src="angular_modules/common/directive/uiTime/uiTime.js"></script>
+  <script src="angular_modules/common/directive/uiNotClose/uiNotCloseOnClick.js"></script>
+  <script src="angular_modules/common/directive/slimScroll/slimScroll.js"></script>
+  <script src="angular_modules/common/directive/imgHolder/imgHolder.js"></script>
+  <script src="angular_modules/common/directive/nav_directive/toggleNavCollapsedMin.js"></script>
+  <script src="angular_modules/common/directive/nav_directive/collapseNav.js"></script>
+  <script src="angular_modules/common/directive/nav_directive/highlightActive.js"></script>
+  <script src="angular_modules/common/directive/nav_directive/toggleOffCanvas.js"></script>
+  <script src="angular_modules/common/directive/imgHolder/imgHolder.js"></script>
+  <!-- Add New Component JS Above -->
+</body>
+</html>
