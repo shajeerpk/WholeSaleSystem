@@ -34,7 +34,7 @@
             <li class="dropdown hidden-xs" dropdown is-open="status.isopenSettings">
                 <a href="javascript:;" class="dropdown-toggle" dropdown-toggle ng-disabled="disabled" ui-wave><i class="imd imd-settings"></i></a>
                 <div class="dropdown-menu with-arrow panel panel-default admin-options scaleInLeft animated" ui-not-close-on-click>
-                    <div class="panel-heading"> <span>ADMIN_OPTIONS</span> </div>
+                    <div class="panel-heading"> <span data-translate="ADMIN_OPTIONS"></span> </div>
                     <ul class="list-group">
                         <li class="list-group-item">
                             <p>Layouts Style</p>
@@ -68,10 +68,10 @@
                     </ul>
                 </div>
             </li>
-            <li class="dropdown hidden-xs" dropdown is-open="status.isopenPalette">
+            <li class="dropdown hidden-xs" dropdown >
                 <a href="javascript:;" class="dropdown-toggle" dropdown-toggle ng-disabled="disabled" ui-wave><i class="imd imd-palette"></i></a>
                 <div class="dropdown-menu with-arrow panel panel-default skin-options scaleInLeft animated" ui-not-close-on-click>
-                    <div class="panel-heading"><span>COLOR_OPTIONS</span></div>
+                    <div class="panel-heading"><span data-translate="COLOR_OPTIONS"></span></div>
                     <div class="panel-body">
                         <div class="row">
                             <div class="col-xs-4">
@@ -251,7 +251,7 @@
             <li class="search-box visible-md visible-lg">
                 <div class="input-group">
                     <span class="input-group-addon"><i class="imd imd-search"></i></span>
-                    <input type="text" class="form-control" placeholder="SEARCH">
+                    <input type="text" class="form-control" placeholder="{{ 'SEARCH' | translate }}">
                     <span class="input-bar"></span>
                 </div>
             </li>
@@ -312,31 +312,31 @@
                 <a href="javascript:;" class="dropdown-toggle" dropdown-toggle ng-disabled="disabled" ui-wave>
                     <img src="images/g1.jpg" alt="" class="img-circle img30_30">
                     <span class="hidden-xs">
-                        <span>{{main.name}}</span>
+                        <span data-translate="LISA"></span>
                     </span>
                 </a>
                 <ul class="dropdown-menu with-arrow pull-right scaleInRight animated">
                     <li>
                         <a href="#/">
                             <i class="imd imd-home"></i>
-                            <span>DASHBOARD</span>
+                            <span data-translate="DASHBOARD"></span>
                         </a>
                     </li>
                     <li>
                         <a href="#/pages/profile">
                             <i class="imd imd-person"></i>
-                            <span>MY_PROFILE</span>
+                            <span data-translate="MY_PROFILE"></span>
                         </a>
                     </li>
                     <li>
                         <a href="#/pages/signin">
                             <i class="imd imd-forward"></i>
-                            <span>LOG_OUT</span>
+                            <span data-translate="LOG_OUT"></span>
                         </a>
                     </li>
                 </ul>
             </li>
-            <li class="dropdown langs text-normal"   dropdown is-open="status.isopenLang">
+            <li class="dropdown langs text-normal" ng-controller="LangCtrl"  dropdown is-open="status.isopenLang">
                 <a href="javascript:;" class="dropdown-toggle active-flag" dropdown-toggle ng-disabled="disabled" ui-wave>
                     <div class="flag {{ getFlag() }}"></div>
                 </a>
@@ -353,6 +353,8 @@
                         <a href="javascript:;" data-ng-click="setLang('日本語')"><div class="flag flags-japan"></div> 日本語</a></li>
                     <li data-ng-show="lang !== 'Русский язык' ">
                         <a href="javascript:;" data-ng-click="setLang('Русский язык')"><div class="flag flags-russia"></div> Русский язык</a></li>
+                     <li data-ng-show="lang !== 'arabic' ">
+                        <a href="javascript:;" data-ng-click="setLang('arabic')"><div class="flag flags-russia"></div>Arabic</a></li>    
                 </ul>
             </li>
         </ul>

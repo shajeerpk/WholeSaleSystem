@@ -1,6 +1,6 @@
 (function () {
 
-    angular.module('dndApp', ['pascalprecht.translate'])
+    angular.module('dndApp')
         .config(['$translateProvider', i18nConfig])
         .controller('LangCtrl', ['$scope', '$translate', LangCtrl]);
 
@@ -55,6 +55,9 @@
                     case 'Русский язык':
                         $translate.use('ru');
                         break;
+                    case 'arabic':
+                         $translate.use('ar');
+                         break;      
                 }
                 return $scope.lang = lang;
             };
@@ -81,6 +84,9 @@
                     case 'Русский язык':
                         return 'flags-russia';
                         break;
+                      case 'arabic':
+                        return 'flags-american';
+                        break;    
                 }
             };
 

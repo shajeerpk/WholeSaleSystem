@@ -11,14 +11,15 @@ angular.module('dndApp',[
               'ngTagsInput',
               'textAngular',
               'angular-loading-bar',
-              'duScroll'
+              'duScroll',
+              'pascalprecht.translate'
              ]);
-/*angular.module('dndApp').config(function($stateProvider, $urlRouterProvider) {
+angular.module('dndApp').config(function($stateProvider, $urlRouterProvider) {
    
     // Add New States Above 
-    $urlRouterProvider.otherwise('angularModules/template/views/pages/404.html');
+    $urlRouterProvider.otherwise('/login');
 
-});*/
+});
 
 angular.module('dndApp').run(function($rootScope) {
 

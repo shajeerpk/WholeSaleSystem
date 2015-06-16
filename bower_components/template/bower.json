@@ -9,7 +9,8 @@
   "stylesheets/material-design-iconic-font.css",
   "stylesheets/bootstrap.css",
   "stylesheets/ui.css",
-  "stylesheets/main.css"
+  "stylesheets/main.css",
+  "stylesheets/google_api.css"
   ],
   "authors": [
     "vineeth c","mail4vineethvijayan@gmail.com"

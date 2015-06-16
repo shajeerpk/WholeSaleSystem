@@ -67,7 +67,7 @@
             }
         }, true);
 
-        $scope.color = {
+       /* $scope.color = {
             primary:    '#3F51B5',
             success:    '#4CAF50',
             info:       '#00BCD4',
@@ -75,7 +75,7 @@
             warning:    '#FFC107',
             danger:     '#F44336',
             gray:       '#DCDCDC'
-        };
+        };*/
 
         $rootScope.$on("$stateChangeSuccess", function (event, currentRoute, previousRoute) {
             $document.scrollTo(0, 0);

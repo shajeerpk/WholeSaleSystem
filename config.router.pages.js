@@ -28,6 +28,10 @@
                 url: '/main',
                 templateUrl: 'angular_modules/template/views/pages/blank.html'
              })
+              .state("otherwise",{
+                templateUrl:'angular_modules/login/partials/partial-login.html',
+                controller:'PartialLoginCtrl'
+              })
             
 
 
