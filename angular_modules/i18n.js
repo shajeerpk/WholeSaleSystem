@@ -2,7 +2,7 @@
 
     angular.module('dndApp')
         .config(['$translateProvider', i18nConfig])
-        .controller('LangCtrl', ['$scope', '$translate', LangCtrl]);
+        .controller('LangCtrl', ['$scope', '$translate','serviceGlobalConfig', LangCtrl]);
 
         // English, Español, 日本語, 中文, Deutsch, français, Italiano, Portugal, Русский язык, 한국어
         // Note: Used on Header, Sidebar, Footer, Dashboard
@@ -32,7 +32,7 @@
         }
 
 
-        function LangCtrl($scope, $translate) {
+        function LangCtrl($scope, $translate,serviceGlobalConfig) {
             $scope.lang = 'English';
 
             $scope.setLang = function(lang) {
@@ -59,6 +59,11 @@
                          $translate.use('ar');
                          break;      
                 }
+                 var gl_promise=serviceGlobalConfig.fnSaveLang(lang,36);
+                    gl_promise.then(function(response){                                  
+                       var result=response.data.result;
+                        console.log(result);  
+                   });
                 return $scope.lang = lang;
             };
 

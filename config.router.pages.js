@@ -31,7 +31,7 @@
               .state("otherwise",{
                 templateUrl:'angular_modules/login/partials/partial-login.html',
                 controller:'PartialLoginCtrl'
-              })
+              });
             
 
 

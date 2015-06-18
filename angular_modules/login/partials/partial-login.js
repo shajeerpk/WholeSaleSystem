@@ -1,6 +1,6 @@
 angular.module('dndApp').controller('PartialLoginCtrl',['$scope','serviceLogin','$state',function($scope,serviceLogin,$state){
 	 var original;
-
+       $scope.invalidLogin =false;
         $scope.user = {
             name: '',
             password: ''
@@ -15,7 +15,13 @@ angular.module('dndApp').controller('PartialLoginCtrl',['$scope','serviceLogin',
           loginPromise.then(function(response){  					//login response here
 				var result=response.data.result;
 				console.log(result);
+				if(result  == 'invalid'){
+				 $scope.invalidLogin =true;	
+				}else{
+			    $scope.invalidLogin =false;	
 				$state.go('home.main');
+				}
 		  });		
     };
+
 }]);
