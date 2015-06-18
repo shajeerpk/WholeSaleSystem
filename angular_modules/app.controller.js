@@ -55,9 +55,13 @@
                  $scope.admin.fixedSidebar=result[0].Tgs_fixed_side_bar;
                  $scope.admin.skin =result[0].Tgs_skin.toString();
                  $scope.admin.lang =result[0].Tgs_language;
-                  $scope.pageTransition.name =result[0].Tgs_page_transition_name.toString();
-                 $scope.pageTransition.class =result[0].Tgs_page_transition_class.toString();
-                 $scope.admin.pageTransition = $scope.pageTransitionOpts[0];
+                 for (var i =0;i<$scope.pageTransitionOpts.length;i++){//to set the selected transitions
+                    if(angular.equals($scope.pageTransitionOpts[i].name,result[0].Tgs_page_transition_name.toString())){
+                       $scope.admin.pageTransition = $scope.pageTransitionOpts[i];
+                      
+                    }
+                 }
+                
                  $scope.setLang ($scope.admin.lang);
                 
                }
@@ -90,12 +94,12 @@
             if (newVal.fixedHeader === false) {
                 $scope.admin.fixedSidebar = false;
             }
-             
+            
           if(newVal.menu !=oldVal.menu || newVal.fixedHeader != oldVal.fixedHeader || newVal.fixedSidebar !=oldVal.fixedSidebar || newVal.layout !=oldVal.layout || newVal.menu != oldVal.menu || newVal.skin != oldVal.skin || newVal.pageTransition.class != oldVal.pageTransition.class || newVal.pageTransition.name != oldVal.pageTransition.name || newVal.lang != oldVal.lang){//we only need to call the service if there is any changes in the previous settings
                     var gl_promise=serviceGlobalConfig.fnSaveConfig(newVal);
                         gl_promise.then(function(response){                                  
                             var result=response.data.result;
-                            console.log(result);  
+                            
                         });
                     }         
         
