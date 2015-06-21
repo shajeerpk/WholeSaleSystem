@@ -131,21 +131,6 @@
                     case 'English':
                         $translate.use('en');
                         break;
-                    case 'Español':
-                        $translate.use('es');
-                        break;
-                    case '中文':
-                        $translate.use('zh');
-                        break;
-                    case '日本語':
-                        $translate.use('ja');
-                        break;
-                    case 'Portugal':
-                        $translate.use('pt');
-                        break;
-                    case 'Русский язык':
-                        $translate.use('ru');
-                        break;
                     case 'arabic':
                          $translate.use('ar');
                          break;      
@@ -158,7 +143,7 @@
                 return $scope.admin.lang = lang;
             };
 
-            $scope.getFlag = function() {
+           /* $scope.getFlag = function() {
                 var lang;
                 lang = $scope.admin.lang;
                 switch (lang) {
@@ -184,7 +169,7 @@
                         return 'flags-american';
                         break;    
                 }
-            };
+            };*/
 
      //-----------------
 
